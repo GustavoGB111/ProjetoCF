@@ -1,0 +1,65 @@
+/*Geral*/
+header {
+    background-color: #E9ECEF;
+    width: 100%;
+    height: 7%;
+    position: absolute;
+    padding: 1%;
+    text-align: center;
+}
+body {
+    margin: 0%;
+}
+/*Header*/
+/*Title*/
+#Title {
+    margin-left: 5%;
+}
+#Title:hover{
+    #Control {color: #4c3299;}
+}
+
+/*Control e Finance*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); #Control {
+    font-family: 'Quicksand', sans-serif; 
+    margin-left: 10%;
+    color: hsl(255, 82%, 66%);
+    transition: 1s;
+    display: inline-block;
+    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); #Finance { 
+font-family: 'Quicksand', sans-serif; 
+display: inline-block;
+}
+
+#Form_New_Value_Button {        
+    display: inline-block;
+    margin-left: 40%;
+    display: inline-block;
+}
+
+#New_Value_Button {
+    display: inline-block;
+    background-color:  hsl(255, 82%, 66%);
+    color: white;
+    font-size: bold;
+    font: medium;
+    font-weight: bold;
+    padding-inline: 0.875rem;
+    height: 2rem;
+    width: 10rem;
+    border-radius: 0.55rem;
+    border: none;
+    transition: 1s;
+}
+
+#New_Value_Button:hover{
+    background-color: #4c3299;
+}
+
+/* */
+#Body {
+
+}
