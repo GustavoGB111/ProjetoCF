@@ -3,44 +3,48 @@ header {
     background-color: #E9ECEF;
     width: 100%;
     height: 7%;
-    position: absolute;
     padding: 1%;
     text-align: center;
 }
+main {
+    background-color: #E9ECEF;
+    width: 100%;
+    height: 10rem;
+    text-align: center;
+   /*Temporario para a separação de boxes*/ border: solid black;
+}
 body {
     margin: 0%;
-}
+    }
 /*Header*/
 /*Title*/
-#Title {
+#Header-Title {
     margin-left: 5%;
 }
-#Title:hover{
-    #Control {color: #4c3299;}
+#Header-Title:hover{
+    #Header-Title-Control {color: #4c3299;}
 }
 
 /*Control e Finance*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); #Control {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); #Header-Title-Control {
     font-family: 'Quicksand', sans-serif; 
-    margin-left: 10%;
     color: hsl(255, 82%, 66%);
     transition: 1s;
     display: inline-block;
-    
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); #Finance { 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); #Header-Title-Finance { 
 font-family: 'Quicksand', sans-serif; 
 display: inline-block;
 }
 
-#Form_New_Value_Button {        
+/*Botão para registrar novo valor*/
+#Header-Title-Form_New_Value_Button {        
     display: inline-block;
-    margin-left: 40%;
-    display: inline-block;
+    margin-left: 20%;
 }
 
-#New_Value_Button {
+#Header-Title-Form-New_Value_Button {
     display: inline-block;
     background-color:  hsl(255, 82%, 66%);
     color: white;
@@ -55,11 +59,78 @@ display: inline-block;
     transition: 1s;
 }
 
-#New_Value_Button:hover{
+#Header-Title-Form-New_Value_Button:hover{
     background-color: #4c3299;
 }
 
-/* */
-#Body {
+/*Body*/
+/*Resumo Financeiro text*/
+#Main-Text-Resumo_financeiro {
+    font-size: bold;
+    font: medium;
+}
 
+/*Botões de "Todos", "Entradas", "Saídas"*/
+/*Todos*/
+#Main-Div-Button-Todos {
+    display: inline-block;
+    background-color:  white;
+    color: black;
+    font-size: bold;
+    font: medium;
+    font-weight: bold;
+    padding-inline: 0.875rem;
+    height: 1.5rem;
+    width: 5rem;
+    border-radius: 0.45rem;
+    border: 0.5px solid #ADB5BD;
+    transition: 1s;
+}
+#Main-Div-Button-Todos:active {
+    color: #6741D9; 
+    border: 0.5px solid #6741D9;
+    background-color: #f0ecfb;
+    transform: scale(1);
+}
+/*Entradas*/
+#Main-Div-Button-Entrada {
+    display: inline-block;
+    background-color:  white;
+    color: black;
+    font-size: bold;
+    font: medium;
+    font-weight: bold;
+    padding-inline: 0.875rem;
+    height: 1.5rem;
+    width: 5rem;
+    border-radius: 0.45rem;
+    border: 0.5px solid #ADB5BD;
+    transition: 1s;
+}
+#Main-Div-Button-Entrada:active {
+    color: #6741D9; 
+    border: 0.5px solid #6741D9;
+    background-color: #f0ecfb;
+    transform: scale(1);
+}
+/*Saídas*/
+#Main-Div-Button-Saída {
+    display: inline-block;
+    background-color:  white;
+    color: black;
+    font-size: bold;
+    font: medium;
+    font-weight: bold;
+    padding-inline: 0.875rem;
+    height: 1.5rem;
+    width: 5rem;
+    border-radius: 0.45rem;
+    border: 0.5px solid #ADB5BD;
+    transition: 1s;
+}
+#Main-Div-Button-Saída:active {
+    color: #6741D9; 
+    border: 0.5px solid #6741D9;
+    background-color: #f0ecfb;
+    transform: scale(1);
 }
