@@ -68,10 +68,16 @@ display: inline-block;
 #Main-Text-Resumo_financeiro {
     font-size: bold;
     font: medium;
+    display: inline-block;
+    margin-right: 10%;
+    margin-left: 8.3%;
+    margin-top: 2.5%;
 }
 
 /*Botões de "Todos", "Entradas", "Saídas"*/
 /*Todos*/
+
+
 #Main-Div-Button-Todos {
     display: inline-block;
     background-color:  white;
