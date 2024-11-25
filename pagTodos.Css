@@ -7,20 +7,18 @@ header {
     text-align: center;
 }
 main {
-    background-color: #E9ECEF;
+    background-color: white;
     width: 100%;
-    height: 10rem;
+    height: 100%rem;
     text-align: center;
-   /*Temporario para a separação de boxes*/ border: solid black;
+
 }
 body {
     margin: 0%;
     }
 /*Header*/
 /*Title*/
-#Header-Title {
-    margin-left: 5%;
-}
+
 #Header-Title:hover{
     #Header-Title-Control {color: #4c3299;}
 }
@@ -41,7 +39,7 @@ display: inline-block;
 /*Botão para registrar novo valor*/
 #Header-Title-Form_New_Value_Button {        
     display: inline-block;
-    margin-left: 20%;
+    margin-left: 30rem;
 }
 
 #Header-Title-Form-New_Value_Button {
@@ -69,74 +67,95 @@ display: inline-block;
     font-size: bold;
     font: medium;
     display: inline-block;
-    margin-right: 10%;
-    margin-left: 8.3%;
     margin-top: 2.5%;
+    margin-left: 2rem;
 }
 
 /*Botões de "Todos", "Entradas", "Saídas"*/
 /*Todos*/
+#Main-Div {
+    text-align: center;
+}
 
+.Main-Div-Button{
+    display: inline-block;
+    background-color:  white;
+    color: black;
+    font-size: bold;
+    font: medium;
+    font-weight: bold;
+    padding-inline: 0.875rem;
+    height: 1.5rem;
+    width: 5rem;
+    border-radius: 0.45rem;
+    border: 0.5px solid #ADB5BD;
+    transition: background-color 1s;
+}
+.Main-Div-Button.active {
+    color: #6741D9; 
+    border: 0.5px solid #6741D9;
+    background-color: #f0ecfb;
+    transform: scale(1);
+}
 
-#Main-Div-Button-Todos {
-    display: inline-block;
-    background-color:  white;
-    color: black;
-    font-size: bold;
-    font: medium;
-    font-weight: bold;
-    padding-inline: 0.875rem;
-    height: 1.5rem;
-    width: 5rem;
-    border-radius: 0.45rem;
-    border: 0.5px solid #ADB5BD;
-    transition: 1s;
+#Separador-Div-Button-Todos {
+    margin-left: 23.9rem;
 }
-#Main-Div-Button-Todos:active {
-    color: #6741D9; 
-    border: 0.5px solid #6741D9;
-    background-color: #f0ecfb;
-    transform: scale(1);
+
+#Div-Box-Valores-Totais-Centralizadora {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-/*Entradas*/
-#Main-Div-Button-Entrada {
-    display: inline-block;
-    background-color:  white;
-    color: black;
-    font-size: bold;
-    font: medium;
-    font-weight: bold;
-    padding-inline: 0.875rem;
-    height: 1.5rem;
-    width: 5rem;
-    border-radius: 0.45rem;
-    border: 0.5px solid #ADB5BD;
-    transition: 1s;
+
+#Div-Valores-Total {
+    background-color: #E9ECEF;
+    width: 49rem;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 2rem;
+    border: solid #ADB5BD;
+    border-radius: 0.8rem;
+    margin-top: 0.5rem;
 }
-#Main-Div-Button-Entrada:active {
-    color: #6741D9; 
-    border: 0.5px solid #6741D9;
-    background-color: #f0ecfb;
-    transform: scale(1);
+
+#Main-Div-Valores-Totais-Soma_Dos_Valores {
+margin-right: 37rem;
 }
-/*Saídas*/
-#Main-Div-Button-Saída {
-    display: inline-block;
-    background-color:  white;
-    color: black;
-    font-size: bold;
-    font: medium;
-    font-weight: bold;
-    padding-inline: 0.875rem;
-    height: 1.5rem;
-    width: 5rem;
-    border-radius: 0.45rem;
-    border: 0.5px solid #ADB5BD;
-    transition: 1s;
+
+#Main-Div-Valores-Totais-Valor {
+
 }
-#Main-Div-Button-Saída:active {
-    color: #6741D9; 
-    border: 0.5px solid #6741D9;
-    background-color: #f0ecfb;
-    transform: scale(1);
+
+#Main-Div-Valores {
+
+}
+
+.Main-Div-Valor-Box {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    border: solid #ADB5BD;
+    border-radius: 0.8rem;
+    margin-top: 1rem;
+    margin-left: 6.5rem;
+    width: 49rem;
+    height: 2.5rem;
+}
+
+.Main-Div-Valor {
+    margin-right: 34rem;
+    margin-top: 0.7rem;
+}
+
+.Main-Div-Tipo-Valor {
+    width: 4.5rem;
+    height: 1rem;
+    border: solid black;
+}
+
+.Main-Div-Button-Remover-Valor {
+margin-left: 2rem;
 }

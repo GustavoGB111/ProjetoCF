@@ -18,13 +18,54 @@
     </header>
     <main>  
         <div id="Main-Div">
+            <div>
             <h3 id="Main-Text-Resumo_financeiro">Resumo financeiro</h3>
-            <button id="Main-Div-Button-Todos">Todos</button>
-            <button id="Main-Div-Button-Entrada">Entradas</button>
-            <button id="Main-Div-Button-Saída">Saídas</button>
+            <button class="Main-Div-Button" id="Separador-Div-Button-Todos">Todos</button>
+            <button class="Main-Div-Button" >Entradas</button>
+            <button class="Main-Div-Button" >Saídas</button>
+            </div>
+
+            <div id="Div-Box-Valores-Totais-Centralizadora">
+                <div id="Div-Valores-Total">
+                    <h4 id="Main-Div-Valores-Totais-Soma_Dos_Valores">Soma dos Valores</h4>
+                    <h4 id="Main-Div-Valores-Totais-Valor">R$3000</h4>
+                </div>
+            </div>
+
+            <div id="Main-Div-Valores">
+                <div class="Main-Div-Valor-Box">
+                    <h3 class="Main-Div-Valor">200R$</h3>
+                    <h3 class="Main-Div-Tipo-Valor"> ENtrada</h3>
+                    <button class="Main-Div-Button-Remover-Valor">REmove</button>
+                </div>
+
+                <div class="Main-Div-Valor-Box">
+                    <h3 class="Main-Div-Valor">200R$</h3>
+                    <h3 class="Main-Div-Tipo-Valor"> ENtrada</h3>
+                    <button class="Main-Div-Button-Remover-Valor">REmove</button>
+                </div>
+
+                <div class="Main-Div-Valor-Box">
+                    <h3 class="Main-Div-Valor">200R$</h3>
+                    <h3 class="Main-Div-Tipo-Valor"> ENtrada</h3>
+                    <button class="Main-Div-Button-Remover-Valor">REmove</button>
+                </div>
+                
+            </div>
+
         </div>
+ 
     </main>
   
+<script>
+    const buttons = document.querySelectorAll('.Main-Div-Button');
+buttons.forEach( button => {
+        button.addEventListener('click', () => {
+            button.classList.toggle('active');
+            });
+        });     
+    
+</script>
 
 </body>
 </html>
