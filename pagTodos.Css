@@ -168,8 +168,25 @@ margin-right: 37rem;
 
 .Main-Div-Button-Remover-Valor {
 margin-left: 1rem;
+<<<<<<< HEAD
 margin-top: 0.25rem;
 width: 2rem;
 height: 2rem;
 }
 
+=======
+margin-top: 0.365rem;
+width: 1.7rem;
+height: 1.7rem;
+transition: 1s;
+border: solid #ADB5BD;
+background-color: white;
+border-radius: 0.3rem;
+color: #ADB5BD;
+}
+
+.Main-Div-Button-Remover-Valor:hover {
+background-color: #E9ECEF;
+color: black;
+}
+>>>>>>> branchTeste
