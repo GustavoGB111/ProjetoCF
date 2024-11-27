@@ -53,11 +53,19 @@
                 </div>
             </div>
 
+            <div id="Modal" class="MeuModal">
+                <div class="modal-content">
+                    <span class="CloseModal">&times;</span>
+                    <p>Modal Teste</p>
+                </div>
+            </div>
+
         </div>
  
     </main>
   
 <script>
+    //Função Active para a permanencia de estado de um botão ativo//desativo
     const buttons = document.querySelectorAll('.Main-Div-Button');
 buttons.forEach( button => {
         button.addEventListener('click', () => {
@@ -65,6 +73,28 @@ buttons.forEach( button => {
             });
         });     
     
+    //Função para o Modal
+        const buttonModalOpen = document.querySelector("#Header-Title-Form-New_Value_Button")
+        const buttonCloseModalSpan = document.querySelector("#CloseModal")
+        const modal = document.querySelector("#Modal")
+
+        //abertura do modal função
+        buttonModalOpen.onclick = function() {
+        modal.style.display = "block";
+        }
+
+        //fechamento do modal função
+        buttonCloseModalSpan.onclick = function() {
+        modal.style.display = "none";
+        }
+
+        //função que para qualquer clique fora do modal o feche
+        window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+        }
+    }
+
 </script>
 
 </body>
