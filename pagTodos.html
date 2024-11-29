@@ -12,7 +12,7 @@
         <div id="Header-Title">
             <h3 id="Header-Title-Control">Control</h3>
             <h3 id="Header-Title-Finance">Finance</h3>
-            <div action="" id="Header-Title-Form_New_Value_Button">
+            <div id="Header-Title-Form_New_Value">
                 <button id="Header-Title-Form-New_Value_Button">Registrar novo valor</button>
             </div>
         </div>
@@ -53,11 +53,12 @@
                 </div>
             </div>
 
-            <div id="Modal" class="MeuModal">
-                <div class="modal-content">
-                    <span class="CloseModal">&times;</span>
-                    <p>Modal Teste</p>
-                </div>
+            <div id="Div-Pag-Modal"> 
+                <dialog id="Pag-Modal">
+                    hello world
+
+                    <button id="Close-Modal">Fechar</button>
+                </dialog>
             </div>
 
         </div>
@@ -73,28 +74,18 @@ buttons.forEach( button => {
             });
         });     
     
-    //Função para o Modal
-        const buttonModalOpen = document.querySelector("#Header-Title-Form-New_Value_Button")
-        const buttonCloseModalSpan = document.querySelector("#CloseModal")
-        const modal = document.querySelector("#Modal")
+    //Função para modal
+    const buttonOpenModal = document.querySelector("#Header-Title-Form-New_Value_Button")
+    const modal = document.querySelector("#Pag-Modal")
+    const buttonCloseModal = document.querySelector("#Close-Modal")
 
-        //abertura do modal função
-        buttonModalOpen.onclick = function() {
-        modal.style.display = "block";
-        }
-
-        //fechamento do modal função
-        buttonCloseModalSpan.onclick = function() {
-        modal.style.display = "none";
-        }
-
-        //função que para qualquer clique fora do modal o feche
-        window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-        }
+    buttonOpenModal.onclick = function () { //função abrir modal
+        modal.showModal()
     }
-
+    buttonCloseModal.onclick = function () { //função fechar modal
+        modal.close()
+    }
+    
 </script>
 
 </body>
