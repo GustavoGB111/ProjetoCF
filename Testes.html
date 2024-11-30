@@ -1,30 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-
-    </style>
+    <title>Exemplo de Input</title>
 </head>
 <body>
-    <button id="dialog-button">abrir modal</button>
-    <dialog id="dialog" >
-        <h2>title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa sint vero eos voluptatum? Repellendus at provident voluptatem saepe nostrumlaudantium nesciunt accusantium rem eaque deleniti? Dolor iusto ipsam quam incidunt.</p>
-    </dialog>
 
-    <script>
-        const button = document.querySelector("#dialog-button")
-        const modal = document.querySelector("#dialog")
-        
-        button.onclick = function() {
-            modal.showModal();
+<form>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" value="Seu nome aqui" onclick="limparInput(this)">
+</form>
+
+<script>
+    function limparInput(elemento) {
+        if (elemento.value == "Seu nome aqui") {
+            elemento.value = "";
         }
+    }
+</script>
 
-
-        console.log("Teu pai é gato prakrl man demais.")
-    </script>
 </body>
 </html>
