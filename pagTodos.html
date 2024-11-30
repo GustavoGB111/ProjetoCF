@@ -6,13 +6,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="pagTodos.Css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <div id="Header-Title">
             <h3 id="Header-Title-Control">Control</h3>
             <h3 id="Header-Title-Finance">Finance</h3>
-            <div action="" id="Header-Title-Form_New_Value_Button">
+            <div id="Header-Title-Form_New_Value">
                 <button id="Header-Title-Form-New_Value_Button">Registrar novo valor</button>
             </div>
         </div>
@@ -66,11 +67,27 @@
                 </div>
             </div>
 
-            <div id="Modal" class="MeuModal">
-                <div class="modal-content">
-                    <span class="CloseModal">&times;</span>
-                    <p>Modal Teste</p>
-                </div>
+            <div id="Div-Pag-Modal"> 
+                <dialog id="Pag-Modal">
+                   <div id="ModalDiv">
+                    <form action="" id="Modal-Div-Form">
+                        <h3 id="Modal-Registro_Valor">Registro de Valor</h3>
+                        <button id="Close-button-Modal" class="fas fa-x"></button>
+                        <h5 id="Modal-Infos">Digite o valor e em seguida aperte no botão referente ao tipo do valor</h5>
+
+                        <h4 id="Modal_Valor">Valor</h4>
+                        <input id="Modal-Div-Form-Input" type="text" value="digite o valor" onclick="limparInput(this)">
+
+                        <h4 id="Modal_Tipo_Valor">Tipo de valor</h4>
+                        <input value="Entrada" type="button" class="Modal-Button-Types" id="Modal-Button-Entrada">
+                        <input value="Saída" type="button" class="Modal-Button-Types" id="Modal-Button-Saída">
+
+                        <button id="Close-Modal">Cancelar</button>
+                        <button type="submit" id="Add-Value-Button">Inserir Valor</button>
+                    </form>
+                   </div>
+                
+                </dialog>
             </div>
 
         </div>
@@ -80,31 +97,35 @@
 <script>
     //Função Active para a permanencia de estado de um botão ativo//desativo
     const buttons = document.querySelectorAll('.Main-Div-Button');
+    const modalButtons = document.querySelector('.Modal-Button-Types')
 buttons.forEach( button => {
         button.addEventListener('click', () => {
             button.classList.toggle('active');
             });
         });     
+
+    //Função para modal
+    const buttonOpenModal = document.querySelector("#Header-Title-Form-New_Value_Button")
+    const modal = document.querySelector("#Pag-Modal")
+    const buttonCloseModal = document.querySelector("#Close-Modal")
+
+    buttonOpenModal.onclick = function () { //função abrir modal
+        modal.showModal()
+    }
+    buttonCloseModal.onclick = function () { //função fechar modal
+        modal.close()
+    }
+
+  /*  modalButtons.forEach( button => {
+        button.addEventListener('click', () => {
+            button.classList.toggle('active');
+            });
+        }); */
     
-    //Função para o Modal
-        const buttonModalOpen = document.querySelector("#Header-Title-Form-New_Value_Button")
-        const buttonCloseModalSpan = document.querySelector("#CloseModal")
-        const modal = document.querySelector("#Modal")
-
-        //abertura do modal função
-        buttonModalOpen.onclick = function() {
-        modal.style.display = "block";
-        }
-
-        //fechamento do modal função
-        buttonCloseModalSpan.onclick = function() {
-        modal.style.display = "none";
-        }
-
-        //função que para qualquer clique fora do modal o feche
-        window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    function limparInput (element) {
+        if (element.value = "digite o valor") {
+            
+            element.value = "";
         }
     }
 
