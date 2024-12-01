@@ -89,7 +89,6 @@ display: inline-block;
     width: 5rem;
     border-radius: 0.45rem;
     border: 0.5px solid #ADB5BD;
-    transition: background-color 1s;
 }
 .Main-Div-Button.active {
     color: #6741D9; 
@@ -122,6 +121,8 @@ display: inline-block;
 }
 
 #Main-Div-Valores-Totais-Soma_Dos_Valores {
+font-size: bold;
+font: medium;
 margin-right: 37rem;
 }
 
@@ -130,6 +131,8 @@ margin-right: 37rem;
 }
 
 #Main-Div-Valores {
+    font-size: bold;
+    font: medium;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -148,11 +151,15 @@ margin-right: 37rem;
 }
 
 .Main-Div-Valor {
+    font-size: bold;
+    font: medium;
     margin-right: 35.5rem;
     margin-top: 0.7rem;
 }
 
 .Main-Div-Tipo-Valor {
+    font-size: bold;
+    font: medium;
     width: 4.5rem;
     height: 1.5rem;
     background-color: #E9ECEF;
@@ -188,7 +195,7 @@ color: black;
 /*MODAL Forma*/
 #Pag-Modal {
 width: 20rem;
-height: 20rem;
+height: 18rem;
 border: none;
 border-radius: 1rem;
 box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5);
@@ -203,10 +210,12 @@ box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5);
 
 /*Registro de Valor text*/
 #Modal-Registro_Valor {
-    text-align: left;
-    display: inline-block;
-    margin-right: 8rem;
-    margin-left: 0;
+font-size: bold;
+font: medium;
+text-align: left;
+display: inline-block;
+margin-right: 8rem;
+margin-left: 0;
 }
 
 /*Botão Fechar*/
@@ -225,6 +234,8 @@ transition: 1s
 
 /*Info*/
 #Modal-Infos {
+font-size: bold;
+font: medium;
 text-align: left;
 color: grey;
 margin-top: 0.5rem;
@@ -232,12 +243,16 @@ margin-top: 0.5rem;
 
 /*Valor Text*/
 #Modal_Valor {
+font-size: bold;
+font: medium;
 text-align: left;
 margin-bottom: 0;
 }
 
 /*input text*/
 #Modal-Div-Form-Input {
+    font-size: bold;
+    font: medium;
     border: solid 0.1rem #ADB5BD;
     border-radius: 0.5rem;
     margin-right: 1rem;
@@ -246,28 +261,62 @@ margin-bottom: 0;
     text-align: left;
     padding-left: 0.5rem;
 }
+/*Modal items*/
+#Modal-Items {
+    align-items: left;
+    display: flex;
+}
 
 /*Tipo de valor text*/
 #Modal_Tipo_Valor {
-text-align: left;
+    font-size: bold;
+    font: medium;
 margin-left: 0rem;
 margin-right: 1rem;
 display: inline-block;
-
+align-items: left;
 }
 
 /*Entrada e Saída botão*/
 .Modal-Button-Types {
-margin-left: 1rem;
+    font-size: bold;
+    font: medium;
+margin-top: 1.25rem;
+margin-right: 0.5rem;
+width: 4rem;
+height: 1.5rem;
+border: 0.125rem solid #E9ECEF;
+border-radius: 0.25rem;
+background-color: white;
+}
 
+.Modal-Button-Types.active {
+    color: #6741D9; 
+    border: 0.5px solid #6741D9;
+    background-color: #f0ecfb;
+    transform: scale(1);
 }
 
 /*Cancelas e Enviar Botão*/
 #Close-Modal {
-margin-left: 10rem;
-
+font-size: bold;
+font: medium;
+height: 1.8rem;
+margin-left: 9.3rem;
+margin-right: 0.4rem;
+margin-top: 1rem;
+border-radius: 0.5rem;
+border: 0.15rem solid #E9ECEF;
+background-color: #E9ECEF;
 }
 
 #Add-Value-Button {
-
+font-size: bold;
+font: medium;
+height: 1.8rem;
+border-radius: 0.5rem;
+border: 0.13rem solid #6741D9;
+background-color: white;
+background-color: #6741D9;
+color: white;
 }

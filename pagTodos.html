@@ -63,12 +63,14 @@
                         <h5 id="Modal-Infos">Digite o valor e em seguida aperte no botão referente ao tipo do valor</h5>
 
                         <h4 id="Modal_Valor">Valor</h4>
-                        <input id="Modal-Div-Form-Input" type="text" value="digite o valor" onclick="limparInput(this)">
-
+                        <input placeholder="R$ 00,00" id="Modal-Div-Form-Input" type="text">
+                        
+                        <div id="Modal-Items">
                         <h4 id="Modal_Tipo_Valor">Tipo de valor</h4>
                         <input value="Entrada" type="button" class="Modal-Button-Types" id="Modal-Button-Entrada">
                         <input value="Saída" type="button" class="Modal-Button-Types" id="Modal-Button-Saída">
-
+                        </div>
+                        
                         <button id="Close-Modal">Cancelar</button>
                         <button type="submit" id="Add-Value-Button">Inserir Valor</button>
                     </form>
@@ -84,12 +86,18 @@
 <script>
     //Função Active para a permanencia de estado de um botão ativo//desativo
     const buttons = document.querySelectorAll('.Main-Div-Button');
-    const modalButtons = document.querySelector('.Modal-Button-Types')
-buttons.forEach( button => {
-        button.addEventListener('click', () => {
-            button.classList.toggle('active');
-            });
-        });     
+    const modalButtons = document.querySelectorAll('.Modal-Button-Types')
+    buttons.forEach( button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+                });
+            });     
+
+    modalButtons.forEach( button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+                });
+            }); 
 
     //Função para modal
     const buttonOpenModal = document.querySelector("#Header-Title-Form-New_Value_Button")
@@ -103,18 +111,8 @@ buttons.forEach( button => {
         modal.close()
     }
 
-  /*  modalButtons.forEach( button => {
-        button.addEventListener('click', () => {
-            button.classList.toggle('active');
-            });
-        }); */
+
     
-    function limparInput (element) {
-        if (element.value = "digite o valor") {
-            
-            element.value = "";
-        }
-    }
 
 </script>
 
