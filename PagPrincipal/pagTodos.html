@@ -23,8 +23,8 @@
             <div>
             <h3 id="Main-Text-Resumo_financeiro">Resumo financeiro</h3>
             <button class="Main-Div-Button" id="Separador-Div-Button-Todos">Todos</button>
-            <button class="Main-Div-Button" >Entradas</button>
-            <button class="Main-Div-Button" >Saídas</button>
+            <button class="Main-Div-Button">Entradas</button>
+            <button class="Main-Div-Button">Saídas</button>
             </div>
 
             <div id="Div-Box-Valores-Totais-Centralizadora">
@@ -64,12 +64,14 @@
 
                         <h4 id="Modal_Valor">Valor</h4>
                         <input placeholder="R$ 00,00" id="Modal-Div-Form-Input" type="text">
-                        
-                        <div id="Modal-Items">
-                        <h4 id="Modal_Tipo_Valor">Tipo de valor</h4>
-                        <input value="Entrada" type="button" class="Modal-Button-Types" id="Modal-Button-Entrada">
-                        <input value="Saída" type="button" class="Modal-Button-Types" id="Modal-Button-Saída">
-                        </div>
+            
+                                <div id="Modal-Items"></div>
+                                <h4 id="Modal_Tipo_Valor">Tipo de valor</h4>
+                                <input value="Entrada" type="button" class="Modal-Button-Types" id="Modal-Button-Entrada" >
+                                <input value="Saída" type="button" class="Modal-Button-Types" id="Modal-Button-Saída">
+                                </div>
+             
+
                         
                         <button id="Close-Modal">Cancelar</button>
                         <button type="submit" id="Add-Value-Button">Inserir Valor</button>
@@ -83,37 +85,7 @@
  
     </main>
   
-<script>
-    //Função Active para a permanencia de estado de um botão ativo//desativo
-    const buttons = document.querySelectorAll('.Main-Div-Button');
-    const modalButtons = document.querySelectorAll('.Modal-Button-Types')
-    buttons.forEach( button => {
-            button.addEventListener('click', () => {
-                button.classList.toggle('active');
-                });
-            });     
-
-    modalButtons.forEach( button => {
-            button.addEventListener('click', () => {
-                button.classList.toggle('active');
-                });
-            }); 
-
-    //Função para modal
-    const buttonOpenModal = document.querySelector("#Header-Title-Form-New_Value_Button")
-    const modal = document.querySelector("#Pag-Modal")
-    const buttonCloseModal = document.querySelector("#Close-Modal")
-
-    buttonOpenModal.onclick = function () { //função abrir modal
-        modal.showModal()
-    }
-    buttonCloseModal.onclick = function () { //função fechar modal
-        modal.close()
-    }
-
-
-    
-
+<script src="pagTodos.js">
 </script>
 
 </body>
