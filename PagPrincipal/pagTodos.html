@@ -57,18 +57,20 @@
             <div id="Div-Pag-Modal"> 
                 <dialog id="Pag-Modal">
                    <div id="ModalDiv">
-                    <form action="" id="Modal-Div-Form">
+                    <form action="" method="post" id="Modal-Div-Form">
                         <h3 id="Modal-Registro_Valor">Registro de Valor</h3>
                         <button id="Close-button-Modal" class="fas fa-x"></button>
                         <h5 id="Modal-Infos">Digite o valor e em seguida aperte no botão referente ao tipo do valor</h5>
 
                         <h4 id="Modal_Valor">Valor</h4>
-                        <input placeholder="R$ 00,00" id="Modal-Div-Form-Input" type="text">
+                        <input placeholder="R$ 00,00" id="Modal-Div-Form-Input" type="number">
             
                                 <div id="Modal-Items"></div>
-                                <h4 id="Modal_Tipo_Valor">Tipo de valor</h4>
-                                <input value="Entrada" type="button" class="Modal-Button-Types" id="Modal-Button-Entrada" >
-                                <input value="Saída" type="button" class="Modal-Button-Types" id="Modal-Button-Saída">
+                                <h4 id="Modal_Tipo_Valor">Tipo de valor:</h4>
+                                <label for="Entrada">Entrada</label>
+                                <input type="radio" name="tipoValor" value="Entrada" class="Inputs-Entrada-Saída">
+                                <label for="Saída">Saída</label>
+                                <input type="radio" name="tipoValor" value="Saída" class="Inputs-Entrada-Saída">
                                 </div>
              
 
