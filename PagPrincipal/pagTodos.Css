@@ -195,7 +195,7 @@ color: black;
 /*MODAL Forma*/
 #Pag-Modal {
 width: 20rem;
-height: 18rem;
+height: 17rem;
 border: none;
 border-radius: 1rem;
 box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5);
@@ -277,26 +277,6 @@ display: inline-block;
 align-items: left;
 }
 
-/*Entrada e Saída botão*/
-.Modal-Button-Types {
-    font-size: bold;
-    font: medium;
-margin-top: 1.25rem;
-margin-right: 0.5rem;
-width: 4rem;
-height: 1.5rem;
-border: 0.125rem solid #E9ECEF;
-border-radius: 0.25rem;
-background-color: white;
-}
-
-.Modal-Button-Types.active {
-    color: #6741D9; 
-    border: 0.5px solid #6741D9;
-    background-color: #f0ecfb;
-    transform: scale(1);
-}
-
 /*Cancelas e Enviar Botão*/
 #Close-Modal {
 font-size: bold;
@@ -304,7 +284,7 @@ font: medium;
 height: 1.8rem;
 margin-left: 9.3rem;
 margin-right: 0.4rem;
-margin-top: 1rem;
+margin-top: 0rem;
 border-radius: 0.5rem;
 border: 0.15rem solid #E9ECEF;
 background-color: #E9ECEF;

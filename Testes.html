@@ -1,22 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Exemplo de Input</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Formulário Completo em HTML</h1>
 
-<form>
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" value="Seu nome aqui" onclick="limparInput(this)">
-</form>
+    <!-- Criar o Form-->
+    <!-- action => para onde os dados serão enviados-->
+    <!-- method => como o form será enviado-->
+    <form action="" method="">
+        <!--Inputs = Entradas-->
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" required placeholder="Digite seu primeiro nome">
 
-<script>
-    function limparInput(elemento) {
-        if (elemento.value == "Seu nome aqui") {
-            elemento.value = "";
-        }
-    }
-</script>
+        <label for="email">Email:</label>
+        <input type="email" name="email" required placeholder="Digite seu Email">
+        
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" required placeholder="Digite sua senha">
+        
+        <!--Inputs para textos mais longos-->
+        <label for="textgrande"></label>
+        <textarea name="textgrande" id="" placeholder="digite o que você achou do sistema"></textarea>
+
+    <!--Formas de seleção -->
+    <input type="radio" name="genero" value="Masculino" >
+    <label for="Masculino">masculino</label>
+
+    <input type="radio" name="genero" value="Feminino" >
+    <label for="Feminino">feminino</label>
+
+    <input type="radio" name="genero" value="Outro" >
+    <label for="Outro">Neutro</label>
+
+        <!--Botão para enviar o formulário-->
+        <button type="submit">Enviar</button>
+
+    </form>
 
 </body>
 </html>
