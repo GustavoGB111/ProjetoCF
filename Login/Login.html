@@ -15,18 +15,19 @@
         </div>
 
         <div id="Main-Div-MainBox">
-            <form action="" id="Form-Login">
+            <form action="/UrlPedro" method="post" id="Form-Login">
                 <h2 id="Login_Text">Login</h2>
                 <h4 class="Text-Acima-Input">Email</h4>
-                <input id="Email-Input" class="Inputs-text" placeholder="Digite Seu Email" type="text">    
+                <input id="Email-Input" name="Email-Input" class="Inputs-text" placeholder="Digite Seu Email" type="email">    
                 <h4 class="Text-Acima-Input">Senha</h4>
-                <input id="Senha-Input" class="Inputs-text" placeholder="Digite Sua Senha" type="text">
-                <input type="submit" value="Entrar" id="Button-Login">
+                <input id="Senha-Input" name="Senha-Input" class="Inputs-text" placeholder="Digite Sua Senha" type="password">
+                <button type="submit" id="Button-Login">Entrar</button>
+            </form>
                 <h4 id="Não-Possuir-Conta_Text">Ainda não possui uma conta?</h4>
                 <button id="Button-Cadastro">Cadastre-se</button>
-            </form>
         </div>
     </main>
 
+<script src="Login.js"></script>>
 </body>
 </html>
