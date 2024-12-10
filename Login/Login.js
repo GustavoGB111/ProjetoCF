@@ -16,17 +16,21 @@ async function Logar(filteredDataLogin) {
     try {
         const response = await fetch('/auth/login', {
             method:'POST',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            },
             body: JSON.stringify(filteredDataLogin)
         })
+
         if (!response.ok) {
             throw new Error('Erro na rede');
         }
 
-        const result = await response.json()
+        const resultProtected = await response.json();
+        const token = resultProtected.token;
+        console.log("token:", token);;
+        localStorage.setItem('Token',token);
 
-        if (result.token) {
-            localStorage.setItem("token", result.token);
-        }
     } catch (Error) {
         throw new Error('Error:',Error);
     }
