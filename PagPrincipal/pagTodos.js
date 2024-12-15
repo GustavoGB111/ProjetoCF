@@ -1,19 +1,93 @@
-    //Função Active para a permanencia de estado de um botão ativo//desativo
-    const buttons = document.querySelectorAll('.Main-Div-Button');
     const typeBox = document.querySelectorAll('Main-Div-Tipo-Valor');
     const BoxesInput = document.querySelectorAll('Main-Div-Valor-Box');
+    //design de clique dos botões
 
+    const buttons = document.querySelectorAll('.Main-Div-Button');
     buttons.forEach(button => {
          button.addEventListener('click', () => {
              buttons.forEach(btn => {
                  if (btn !== button && btn.classList.contains('active')) {
                      btn.classList.remove('active'); 
-                    }
+                    }   
                      });
                       button.classList.toggle('active');
-                     
                     });
                 });
+    
+    //funcionalidade de filter para botões
+    const todosButton = document.querySelector('all-Button');
+    const entradaButton = document.querySelector('entrada-Button');
+    const saidaButton = document.querySelector('saida-Button');
+    const divTransacoes = document.querySelector('Main-Div-Valores');
+
+    //Todos
+    todosButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        async function Cadastro() {
+            const response = await fetch('/get/transactions', {
+                method: "GET"
+            });
+    
+            if (!response.ok) {
+                throw new Error('Erro na rede');
+            };
+            const resultRegister = await response.JSON();
+            resultRegister.forEach(usuario => {
+                const divUsuario = document.createElement('div');
+                divUsuario.classList.add('Main-Div-Valor-Box');
+                const valor = document.createElement('div');
+                valor.classList.add('Main-Div-Valor');
+                valor.textContent = `${usuario.Value}`;
+                const tipoValor = document.createElement('div');
+                tipoValor.classList.add('Main-Div-Tipo-Valor');
+                tipoValor.textContent = `${usuario.Type}`;
+
+                divUsuario.appendChild(valor);
+                divUsuario.appendChild(tipoValor);
+
+            });
+        };
+    });
+
+    //Entrada
+    entradaButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        async function Cadastro() {          
+            const response = await fetch('/get/transactions', {
+                method: "GET"
+            });
+    
+            if (!response.ok) {
+                throw new Error('Erro na rede');
+            };
+            const resultRegister = await response.JSON();
+            const resultRegisterEntrada = resultRegister.filter(usuario => usuario.Type == "Income");
+            resultRegisterEntrada.forEach(usuario => {
+
+            });
+        };
+    });
+
+    //Saída
+    saidaButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        async function Cadastro() {          
+            const response = await fetch('/get/transactions', {
+                method: "GET"
+            });
+    
+            if (!response.ok) {
+                throw new Error('Erro na rede');
+            };
+            const resultRegister = await response.JSON();
+            const resultRegisterSaida = resultRegister.filter(usuario => usuario.Type == "Outcome");
+            resultRegisterSaida.forEach(usuario => {
+
+            });
+        };
+    });
+
+    
 
     //Função para modal
     const buttonOpenModal = document.querySelector("#Header-Title-Form-New_Value_Button");
