@@ -10,25 +10,27 @@ form.addEventListener('submit', (event) => {
         Email: EmailLogin,
         Senha: SenhaLogin
     };
+    console.log(filteredDataLogin)
 });
 
 async function Logar(filteredDataLogin) {
     try {
         const response = await fetch('/auth/login', {
             method:'POST',
-            headers: {
-                'Authorization': `Bearer ${token}`
-            },
             body: JSON.stringify(filteredDataLogin)
         })
 
         if (!response.ok) {
             throw new Error('Erro na rede');
+        } else {
+            form.addEventListener('click', (event) =>{
+                window.location.href = 'http:http://127.0.0.1:5500/PagPrincipal/pagTodos.html'
+            });
         }
 
         const resultProtected = await response.json();
         const token = resultProtected.token;
-        console.log("token:", token);;
+        console.log("token:", token);
         localStorage.setItem('Token',token);
 
     } catch (Error) {

@@ -1,3 +1,6 @@
+*{
+    font-family: "Roboto", sans-serif;
+}
 /*Geral*/
 header {
     background-color: #E9ECEF;
@@ -195,10 +198,10 @@ color: black;
 /*MODAL Forma*/
 #Pag-Modal {
 width: 20rem;
-height: 17rem;
+height: 18rem;
 border: none;
 border-radius: 1rem;
-box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5);
+box-shadow: 0 0 0 100rem rgba(0, 0, 0, 0.5);
 
 }
 
@@ -220,7 +223,6 @@ margin-left: 0;
 
 /*Botão Fechar*/
 #Close-button-Modal {
-margin-left: 1.6rem;
 width: 1.5rem;
 height: 1.5rem;
 border: #ADB5BD;

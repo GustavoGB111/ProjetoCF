@@ -12,7 +12,6 @@
                       button.classList.toggle('active'); 
                     }); });
 
-
     //Função para modal
     const buttonOpenModal = document.querySelector("#Header-Title-Form-New_Value_Button")
     const modal = document.querySelector("#Pag-Modal")
@@ -24,4 +23,23 @@
     buttonCloseModal.onclick = function () { //função fechar modal
         modal.close()
     }
+
+    //Função Form do Modal 
+    const formModal = document.querySelector('Modal-Div-Form')
+    formModal.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const filteredDataMain = new FormData(formModal);
+        const typeTransaction = filteredDataMain.get('InputType');
+        const valueTransaction = filteredDataMain.get('ValueTransaction');
+        if (valueTransaction <= 0 || typeTransaction == null) {
+            alert('Error')
+        } else {
+            const filteredDataMain = {
+                typeTransaction: typeTransaction,
+                valueTransaction: valueTransaction
+            }
+            console.log(filteredDataMain)
+        }
+
+    });
 
