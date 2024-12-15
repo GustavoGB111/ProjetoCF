@@ -22,16 +22,15 @@ async function Logar(filteredDataLogin) {
 
         if (!response.ok) {
             throw new Error('Erro na rede');
-        } else {
-            form.addEventListener('click', (event) =>{
-                window.location.href = 'http:http://127.0.0.1:5500/PagPrincipal/pagTodos.html'
-            });
         }
 
         const resultProtected = await response.json();
         const token = resultProtected.token;
         console.log("token:", token);
         localStorage.setItem('Token',token);
+        form.addEventListener('click', (event) =>{
+            window.location.href = 'http:http://127.0.0.1:5500/PagPrincipal/pagTodos.html'
+        });
 
     } catch (Error) {
         throw new Error('Error:',Error);

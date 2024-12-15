@@ -3,23 +3,14 @@ const backButton = document.querySelector('#Back-Button')
 form.addEventListener('submit', (event) => {
   event.preventDefault(); 
   const formData = new FormData(form);
-  const Name = formData.get('Nome-Input');
   const Email = formData.get('Email-Input');
   const Senha = formData.get('Senha-Input');
   const ConfirmSenha = formData.get('Confirm-Senha-Input');
 
   if (Senha == ConfirmSenha) {
-    if (Name != null) {
-        const filteredData = {
-            Name: Name,
-            Email: Email,
-            Senha: Senha 
-          };
-    } else {
-        const filteredData = {
-            Email: Email,
-            Senha: Senha 
-          };
+      const filteredData = {
+          Email: Email,
+          Senha: Senha 
     }
 
       async function Cadastro(filteredData) {

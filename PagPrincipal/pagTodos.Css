@@ -1,3 +1,16 @@
+/*Control e Finance*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); #Header-Title-Control {
+    font-family: 'Quicksand', sans-serif; 
+    color: hsl(255, 82%, 66%);
+    transition: 1s;
+    display: inline-block;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); #Header-Title-Finance { 
+font-family: 'Quicksand', sans-serif; 
+display: inline-block;
+}
+
 *{
     font-family: "Roboto", sans-serif;
 }
@@ -26,18 +39,6 @@ body {
     #Header-Title-Control {color: #4c3299;}
 }
 
-/*Control e Finance*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); #Header-Title-Control {
-    font-family: 'Quicksand', sans-serif; 
-    color: hsl(255, 82%, 66%);
-    transition: 1s;
-    display: inline-block;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); #Header-Title-Finance { 
-font-family: 'Quicksand', sans-serif; 
-display: inline-block;
-}
 
 /*Botão para registrar novo valor*/
 #Header-Title-Form_New_Value {        
@@ -129,10 +130,6 @@ font: medium;
 margin-right: 37rem;
 }
 
-#Main-Div-Valores-Totais-Valor {
-
-}
-
 #Main-Div-Valores {
     font-size: bold;
     font: medium;
@@ -178,18 +175,6 @@ margin-right: 37rem;
     padding-inline: 0.5rem;
 }
 
-.Main-Div-Button-Remover-Valor {
-margin-left: 1rem;
-margin-top: 0.365rem;
-width: 1.7rem;
-height: 1.7rem;
-transition: 1s;
-border: solid #ADB5BD;
-background-color: white;
-border-radius: 0.3rem;
-color: #ADB5BD;
-}
-
 .Main-Div-Button-Remover-Valor:hover {
 background-color: #E9ECEF;
 color: black;
@@ -207,9 +192,6 @@ box-shadow: 0 0 0 100rem rgba(0, 0, 0, 0.5);
 
 /* Modal Conteúdos*/
 /* Modal Div Formulário*/
-#Modal-Div-Form {
- 
-}
 
 /*Registro de Valor text*/
 #Modal-Registro_Valor {
@@ -273,10 +255,10 @@ margin-bottom: 0;
 #Modal_Tipo_Valor {
     font-size: bold;
     font: medium;
-margin-left: 0rem;
-margin-right: 1rem;
-display: inline-block;
-align-items: left;
+    margin-left: 0rem;
+    margin-right: 1rem;
+    display: inline-block;
+    align-items: left;
 }
 
 /*Cancelas e Enviar Botão*/
